@@ -7,29 +7,19 @@ const App: React.FC = () => {
         let result: string = '';
 
         if (userChoice === 'rock') {
-            if (computer === 'Rock') {
-                result = 'Tie'
-            } else if (computer === 'Paper') {
-                result = 'U lose'
-            } else if (computer === 'Scissors') {
-                result = 'U win'
-            }
+            if (computer === 'Rock') result = 'Tie'
+            else if (computer === 'Paper') result = 'U lose'
+            else result = 'U win'
+
         } else if (userChoice === 'paper') {
-            if (computer === 'Rock') {
-                result = 'U win'
-            } else if (computer === 'Paper') {
-                result = "Tie"
-            } else if (computer === 'Scissors') {
-                result = "U lose"
-            }
+            if (computer === 'Rock') result = 'U win'
+            else if (computer === 'Paper') result = "Tie"
+            else result = "U lose"
+
         } else if (userChoice === 'scissors') {
-            if (computer === 'Rock') {
-                result = 'U lose'
-            } else if (computer === 'Paper') {
-                result = "U win"
-            } else if (computer === 'Scissors') {
-                result = "Tie"
-            }
+            if (computer === 'Rock') result = 'U lose'
+            else if (computer === 'Paper') result = "U win"
+            else result = "Tie"
         }
         alert(
             `U chose ${userChoice} . Computer chose ${computer}. Result is ${result}`
